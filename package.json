@@ -1,0 +1,25 @@
+{
+  "name": "caraml-core",
+  "version": "0.1.0",
+  "description": "Caraml core view controller",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiquidPlayer/caraml-core.git"
+  },
+  "author": "Eric Lange",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LiquidPlayer/caraml-core/issues"
+  },
+  "homepage": "https://github.com/LiquidPlayer/caraml-core#readme",
+  "dependencies": {
+    "bindings": "^1.3.1"
+  }
+}
