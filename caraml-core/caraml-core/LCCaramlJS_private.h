@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CaramlJS.h"
+#import "LCCaramlJS.h"
 #import "CaramlView.h"
 #import "CaramlView_private.h"
 
-@interface CaramlJS(private)
+@interface LCCaramlJS(private)
 @property (nonatomic, strong) CaramlView *m_view;
 
 - (id) init:(JSContext*)context view:(CaramlView*)view;

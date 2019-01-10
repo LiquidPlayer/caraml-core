@@ -6,16 +6,16 @@
 //  Copyright © 2019 LiquidPlayer. All rights reserved.
 //
 
-#import "CaramlJS.h"
-#import "CaramlJS_private.h"
+#import "LCCaramlJS.h"
+#import "LCCaramlJS_private.h"
 #import "CaramlView.h"
 #import "CaramlView_private.h"
 
-@interface CaramlJS()
+@interface LCCaramlJS()
 @property (nonatomic, strong) CaramlView *m_view;
 @end
 
-@implementation CaramlJS
+@implementation LCCaramlJS
 - (id) init:(JSContext*)context view:(CaramlView*)view
 {
     self = [super init];
@@ -35,10 +35,10 @@
     [self.m_view detach];
 }
 
-+ (CaramlJS*) from:(JSValue*)value
++ (LCCaramlJS*) from:(JSValue*)value
 {
-    if ([value.class conformsToProtocol:@protocol(CaramlJSExports)]) {
-        return (CaramlJS*) value;
+    if ([value.class conformsToProtocol:@protocol(LCCaramlJSExports)]) {
+        return (LCCaramlJS*) value;
     }
     @throw [NSException exceptionWithName:@"NotACaramlJSObjectException"
                                    reason:@"Object is not a CaramlJS object"

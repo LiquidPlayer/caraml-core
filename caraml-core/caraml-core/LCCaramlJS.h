@@ -11,10 +11,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol CaramlJSExports<JSExport>
+@protocol LCCaramlJSExports<JSExport>
 @end
 
-@interface CaramlJS : NSObject<CaramlJSExports>
+@interface LCCaramlJS : NSObject<LCCaramlJSExports>
 
 /**
  Attaches a `CaramlSurface` to the view represented by this `CaramlJS` object.
@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param value The JavaScript value passed to the node JS API
  * @return The Java API object
  */
-+ (CaramlJS*) from:(JSValue*)value;
++ (LCCaramlJS*) from:(JSValue*)value;
 
 @end
 

@@ -12,11 +12,12 @@
 		07E0022121E761E40088E79C /* caraml-core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07E0022021E761E40088E79C /* caraml-core.cpp */; };
 		07E0022321E766D90088E79C /* register.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E0022221E766D90088E79C /* register.mm */; };
 		07E0022521E76B1F0088E79C /* caraml-core.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0022421E76B1F0088E79C /* caraml-core.h */; };
-		07E0022821E770E10088E79C /* CaramlJS.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0022621E770E10088E79C /* CaramlJS.h */; };
-		07E0022921E770E10088E79C /* CaramlJS.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0022721E770E10088E79C /* CaramlJS.m */; };
+		07E0022821E770E10088E79C /* LCCaramlJS.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0022621E770E10088E79C /* LCCaramlJS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07E0022921E770E10088E79C /* LCCaramlJS.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0022721E770E10088E79C /* LCCaramlJS.m */; };
 		07E0022B21E7711A0088E79C /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E0022A21E7711A0088E79C /* JavaScriptCore.framework */; };
 		07E0023021E777780088E79C /* CaramlView.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0022E21E777780088E79C /* CaramlView.h */; };
 		07E0023121E777780088E79C /* CaramlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0022F21E777780088E79C /* CaramlView.m */; };
+		07E0023421E796A00088E79C /* LCCaramlSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0022C21E772C00088E79C /* LCCaramlSurface.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +28,11 @@
 		07E0022021E761E40088E79C /* caraml-core.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "caraml-core.cpp"; path = "../../src/caraml-core.cpp"; sourceTree = "<group>"; };
 		07E0022221E766D90088E79C /* register.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = register.mm; sourceTree = "<group>"; };
 		07E0022421E76B1F0088E79C /* caraml-core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "caraml-core.h"; path = "../../src/caraml-core.h"; sourceTree = "<group>"; };
-		07E0022621E770E10088E79C /* CaramlJS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaramlJS.h; sourceTree = "<group>"; };
-		07E0022721E770E10088E79C /* CaramlJS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaramlJS.m; sourceTree = "<group>"; };
+		07E0022621E770E10088E79C /* LCCaramlJS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCCaramlJS.h; sourceTree = "<group>"; };
+		07E0022721E770E10088E79C /* LCCaramlJS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCCaramlJS.m; sourceTree = "<group>"; };
 		07E0022A21E7711A0088E79C /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		07E0022C21E772C00088E79C /* LCCaramlSurface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCCaramlSurface.h; sourceTree = "<group>"; };
-		07E0022D21E776380088E79C /* CaramlJS_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaramlJS_private.h; sourceTree = "<group>"; };
+		07E0022D21E776380088E79C /* LCCaramlJS_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCCaramlJS_private.h; sourceTree = "<group>"; };
 		07E0022E21E777780088E79C /* CaramlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaramlView.h; sourceTree = "<group>"; };
 		07E0022F21E777780088E79C /* CaramlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaramlView.m; sourceTree = "<group>"; };
 		07E0023221E777FF0088E79C /* CaramlView_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaramlView_private.h; sourceTree = "<group>"; };
@@ -75,9 +76,9 @@
 				07E0021221E75B2B0088E79C /* caraml_core.h */,
 				07E0021321E75B2B0088E79C /* Info.plist */,
 				07E0022221E766D90088E79C /* register.mm */,
-				07E0022621E770E10088E79C /* CaramlJS.h */,
-				07E0022721E770E10088E79C /* CaramlJS.m */,
-				07E0022D21E776380088E79C /* CaramlJS_private.h */,
+				07E0022621E770E10088E79C /* LCCaramlJS.h */,
+				07E0022721E770E10088E79C /* LCCaramlJS.m */,
+				07E0022D21E776380088E79C /* LCCaramlJS_private.h */,
 				07E0022C21E772C00088E79C /* LCCaramlSurface.h */,
 				07E0022E21E777780088E79C /* CaramlView.h */,
 				07E0022F21E777780088E79C /* CaramlView.m */,
@@ -103,8 +104,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E0021421E75B2B0088E79C /* caraml_core.h in Headers */,
+				07E0022821E770E10088E79C /* LCCaramlJS.h in Headers */,
+				07E0023421E796A00088E79C /* LCCaramlSurface.h in Headers */,
 				07E0023021E777780088E79C /* CaramlView.h in Headers */,
-				07E0022821E770E10088E79C /* CaramlJS.h in Headers */,
 				07E0022521E76B1F0088E79C /* caraml-core.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,7 +204,7 @@
 				07E0022321E766D90088E79C /* register.mm in Sources */,
 				07E0022121E761E40088E79C /* caraml-core.cpp in Sources */,
 				07E0023121E777780088E79C /* CaramlView.m in Sources */,
-				07E0022921E770E10088E79C /* CaramlJS.m in Sources */,
+				07E0022921E770E10088E79C /* LCCaramlJS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

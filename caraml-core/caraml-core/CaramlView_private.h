@@ -8,7 +8,7 @@
 
 #import "CaramlView.h"
 #import "LCCaramlSurface.h"
-#import "CaramlJS.h"
+#import "LCCaramlJS.h"
 
 @interface CaramlView(private)
 
@@ -16,6 +16,6 @@
 
 - (void) detach;
 
-+ (CaramlJS* _Nullable) caramlJSFromContext:(JSContext*)context;
++ (LCCaramlJS* _Nullable) caramlJSFromContext:(JSContext*)context;
 
 @end

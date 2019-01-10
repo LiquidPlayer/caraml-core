@@ -8,15 +8,15 @@
 
 #import "CaramlView.h"
 #import "CaramlView_private.h"
-#import "CaramlJS.h"
-#import "CaramlJS_private.h"
+#import "LCCaramlJS.h"
+#import "LCCaramlJS_private.h"
 
 static NSMutableDictionary *contextMap;
 
 @interface CaramlView() <LCMicroServiceDelegate>
 @property (nonatomic, strong) UIView *surfaceView;
 @property (nonatomic, strong) NSObject<LCCaramlSurface> *attachedSurface;
-@property (nonatomic, strong) CaramlJS *caramlJS;
+@property (nonatomic, strong) LCCaramlJS *caramlJS;
 @end
 
 @implementation CaramlView {
@@ -195,7 +195,7 @@ static NSMutableDictionary *contextMap;
     }
 }
 
-+ (CaramlJS* _Nullable) caramlJSFromContext:(JSContext*)context
++ (LCCaramlJS* _Nullable) caramlJSFromContext:(JSContext*)context
 {
     if (contextMap == nil) {
         contextMap = [[NSMutableDictionary alloc] init];
@@ -209,7 +209,7 @@ static NSMutableDictionary *contextMap;
 - (void) onStart:(LCMicroService*)service
 {
     [service.process sync:^(JSContext* context) {
-        self.caramlJS = [[CaramlJS alloc] init:context view:self];
+        self.caramlJS = [[LCCaramlJS alloc] init:context view:self];
         self->contextHash_ = (unsigned long)[context JSGlobalContextRef];
         contextMap[@(self->contextHash_)] = self.caramlJS;
     }];
