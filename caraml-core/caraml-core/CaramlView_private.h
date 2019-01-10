@@ -10,12 +10,12 @@
 #import "LCCaramlSurface.h"
 #import "LCCaramlJS.h"
 
-@interface CaramlView(private)
+@interface CaramlView()
 
-- (void) attach:(NSObject<LCCaramlSurface> *)surface onRestore:(BOOL)onRestore;
+- (void) attach:(NSObject<LCCaramlSurface> * _Nonnull)surface onRestore:(BOOL)onRestore;
 
 - (void) detach;
 
-+ (LCCaramlJS* _Nullable) caramlJSFromContext:(JSContext*)context;
++ (LCCaramlJS* _Nullable) caramlJSFromContext:(JSContext* _Nonnull)context;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <LiquidCore/addon/LCAddOn.h>
+#import "CaramlView_private.h"
 #include "caraml-core.h"
 
 @interface CaramlCore : NSObject<LCAddOn>
@@ -26,12 +27,21 @@
 
 - (void) register:(NSString*) module
 {
+    assert([@"caramlcore" isEqualToString:module]);
     register_caramlcore();
 }
 
 - (void) require:(JSValue*) binding;
 {
+    assert(binding != nil);
+    assert([binding isObject]);
     
+    LCCaramlJS *caramlJS = [CaramlView caramlJSFromContext:[binding context]];
+    assert(caramlJS != nil);
+    
+    binding[@"getInstance"] = ^{
+        return caramlJS;
+    };
 }
 
 @end
