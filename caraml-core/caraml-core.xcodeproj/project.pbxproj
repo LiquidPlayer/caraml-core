@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		07E0021421E75B2B0088E79C /* caraml_core.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0021221E75B2B0088E79C /* caraml_core.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0021F21E75EC40088E79C /* LiquidCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E0021E21E75EC40088E79C /* LiquidCore.framework */; };
 		07E0022121E761E40088E79C /* caraml-core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07E0022021E761E40088E79C /* caraml-core.cpp */; };
 		07E0022321E766D90088E79C /* register.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E0022221E766D90088E79C /* register.mm */; };
 		07E0022521E76B1F0088E79C /* caraml-core.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0022421E76B1F0088E79C /* caraml-core.h */; };
@@ -18,13 +17,13 @@
 		07E0023021E777780088E79C /* CaramlView.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0022E21E777780088E79C /* CaramlView.h */; };
 		07E0023121E777780088E79C /* CaramlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0022F21E777780088E79C /* CaramlView.m */; };
 		07E0023421E796A00088E79C /* LCCaramlSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0022C21E772C00088E79C /* LCCaramlSurface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07E0026021E7A43A0088E79C /* LiquidCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E0025F21E7A43A0088E79C /* LiquidCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07E0020F21E75B2B0088E79C /* caraml_core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = caraml_core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E0021221E75B2B0088E79C /* caraml_core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = caraml_core.h; sourceTree = "<group>"; };
 		07E0021321E75B2B0088E79C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07E0021E21E75EC40088E79C /* LiquidCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LiquidCore.framework; path = Carthage/Build/iOS/LiquidCore.framework; sourceTree = "<group>"; };
 		07E0022021E761E40088E79C /* caraml-core.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "caraml-core.cpp"; path = "../../src/caraml-core.cpp"; sourceTree = "<group>"; };
 		07E0022221E766D90088E79C /* register.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = register.mm; sourceTree = "<group>"; };
 		07E0022421E76B1F0088E79C /* caraml-core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "caraml-core.h"; path = "../../src/caraml-core.h"; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		07E0022E21E777780088E79C /* CaramlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaramlView.h; sourceTree = "<group>"; };
 		07E0022F21E777780088E79C /* CaramlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaramlView.m; sourceTree = "<group>"; };
 		07E0023221E777FF0088E79C /* CaramlView_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaramlView_private.h; sourceTree = "<group>"; };
+		07E0025F21E7A43A0088E79C /* LiquidCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LiquidCore.framework; path = ../Carthage/Build/iOS/LiquidCore.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,8 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E0026021E7A43A0088E79C /* LiquidCore.framework in Frameworks */,
 				07E0022B21E7711A0088E79C /* JavaScriptCore.framework in Frameworks */,
-				07E0021F21E75EC40088E79C /* LiquidCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,8 +90,8 @@
 		07E0021A21E75DBF0088E79C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07E0025F21E7A43A0088E79C /* LiquidCore.framework */,
 				07E0022A21E7711A0088E79C /* JavaScriptCore.framework */,
-				07E0021E21E75EC40088E79C /* LiquidCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/LiquidCore.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/LiquidCore.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -341,7 +341,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)/LiquidCore.framework/Headers/addon/node",
@@ -373,7 +373,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)/LiquidCore.framework/Headers/addon/node",
