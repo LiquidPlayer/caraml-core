@@ -15,6 +15,7 @@ import org.liquidplayer.javascript.JSFunction;
 import org.liquidplayer.javascript.JSObject;
 import org.liquidplayer.javascript.JSValue;
 import org.liquidplayer.service.AddOn;
+import org.liquidplayer.service.MicroService;
 
 public class Caramlcore implements AddOn {
     public Caramlcore(Context context) {}
@@ -28,7 +29,7 @@ public class Caramlcore implements AddOn {
     }
 
     @Override
-    public void require(JSValue binding) {
+    public void require(JSValue binding, MicroService service) {
         if (BuildConfig.DEBUG && (binding == null || !binding.isObject())) {
             throw new AssertionError();
         }
