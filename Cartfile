@@ -1,1 +1,1 @@
-git "git@github.com:LiquidPlayer/LiquidCore.git" "master"
+git "file:///Users/eric/workspace/LiquidPlayer/LiquidCore" "master"
