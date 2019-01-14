@@ -16,3 +16,4 @@ FOUNDATION_EXPORT const unsigned char caraml_coreVersionString[];
 
 #import <caraml_core/LCCaramlSurface.h>
 #import <caraml_core/LCCaramlJS.h>
+#import <caraml_core/CaramlView.h>

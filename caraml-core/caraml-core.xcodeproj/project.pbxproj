@@ -14,7 +14,7 @@
 		07E0022821E770E10088E79C /* LCCaramlJS.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0022621E770E10088E79C /* LCCaramlJS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07E0022921E770E10088E79C /* LCCaramlJS.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0022721E770E10088E79C /* LCCaramlJS.m */; };
 		07E0022B21E7711A0088E79C /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E0022A21E7711A0088E79C /* JavaScriptCore.framework */; };
-		07E0023021E777780088E79C /* CaramlView.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0022E21E777780088E79C /* CaramlView.h */; };
+		07E0023021E777780088E79C /* CaramlView.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0022E21E777780088E79C /* CaramlView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07E0023121E777780088E79C /* CaramlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0022F21E777780088E79C /* CaramlView.m */; };
 		07E0023421E796A00088E79C /* LCCaramlSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0022C21E772C00088E79C /* LCCaramlSurface.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07E0026021E7A43A0088E79C /* LiquidCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E0025F21E7A43A0088E79C /* LiquidCore.framework */; };
@@ -105,8 +105,8 @@
 			files = (
 				07E0021421E75B2B0088E79C /* caraml_core.h in Headers */,
 				07E0022821E770E10088E79C /* LCCaramlJS.h in Headers */,
-				07E0023421E796A00088E79C /* LCCaramlSurface.h in Headers */,
 				07E0023021E777780088E79C /* CaramlView.h in Headers */,
+				07E0023421E796A00088E79C /* LCCaramlSurface.h in Headers */,
 				07E0022521E76B1F0088E79C /* caraml-core.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
