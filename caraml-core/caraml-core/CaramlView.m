@@ -197,9 +197,7 @@ static NSMutableDictionary *contextMap;
 
 + (LCCaramlJS* _Nullable) caramlJSFromContext:(JSContext*)context
 {
-    if (contextMap == nil) {
-        contextMap = [[NSMutableDictionary alloc] init];
-    }
+    if (contextMap == nil) return nil;
     
     return contextMap[@((unsigned long)[context JSGlobalContextRef])];
 }
@@ -211,6 +209,10 @@ static NSMutableDictionary *contextMap;
     [service.process sync:^(JSContext* context) {
         self.caramlJS = [[LCCaramlJS alloc] init:context view:self];
         self->contextHash_ = (unsigned long)[context JSGlobalContextRef];
+        if (contextMap == nil) {
+            contextMap = [[NSMutableDictionary alloc] init];
+        }
+
         contextMap[@(self->contextHash_)] = self.caramlJS;
     }];
 }
