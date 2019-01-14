@@ -52,9 +52,24 @@
 
 @implementation CaramlCoreFactory
 
+- (id) init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
 - (id<LCAddOn>)createInstance
 {
     return [[CaramlCore alloc] init];
 }
 
 @end
+
+__attribute__((constructor))
+static void coreJSRegistration()
+{
+    [LCAddOnFactory registerAddOnFactory:@"caramlcore" factory:[[CaramlCoreFactory alloc] init]];
+}
