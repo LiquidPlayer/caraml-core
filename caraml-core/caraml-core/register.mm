@@ -31,7 +31,7 @@
     register_caramlcore();
 }
 
-- (void) require:(JSValue*) binding;
+- (void) require:(JSValue*) binding service:(LCMicroService *)service
 {
     assert(binding != nil);
     assert([binding isObject]);
