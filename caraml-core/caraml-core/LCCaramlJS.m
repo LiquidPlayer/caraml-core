@@ -37,9 +37,11 @@
 
 + (LCCaramlJS*) from:(JSValue*)value
 {
-    if ([value.class conformsToProtocol:@protocol(LCCaramlJSExports)]) {
-        return (LCCaramlJS*) value;
+    if (value != nil && value.isObject) {
+        LCCaramlJS *caramlJS = [value toObjectOfClass:LCCaramlJS.class];
+        if (caramlJS != nil) return caramlJS;
     }
+    
     @throw [NSException exceptionWithName:@"NotACaramlJSObjectException"
                                    reason:@"Object is not a CaramlJS object"
                                  userInfo:nil];

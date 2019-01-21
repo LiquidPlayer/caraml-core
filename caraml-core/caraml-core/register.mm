@@ -1,12 +1,12 @@
 //
-//  register.m
+//  register.mm
 //  caraml-core
 //
 //  Created by Eric Lange on 1/10/19.
 //  Copyright © 2019 LiquidPlayer. All rights reserved.
 //
 
-#import <LiquidCore/addon/LCAddOn.h>
+#import <LiquidCore/LiquidCore.h>
 #import "CaramlView_private.h"
 #include "caraml-core.h"
 

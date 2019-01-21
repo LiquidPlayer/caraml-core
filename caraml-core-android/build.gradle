@@ -21,12 +21,17 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {}
     }
     externalNativeBuild {
         cmake {
             path "CMakeLists.txt"
         }
     }
+}
+
+configurations {
+    liquidcore {}
 }
 
 dependencies {
@@ -36,7 +41,35 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    implementation project(':LiquidCoreAndroid')
+    if (findProject(':LiquidCoreAndroid') != null) {
+        liquidcore project(path: ':LiquidCoreAndroid', configuration: 'default')
+        implementation project(':LiquidCoreAndroid')
+    } else {
+        liquidcore 'com.github.LiquidPlayer:LiquidCore:0.6.0'
+        implementation 'com.github.LiquidPlayer:LiquidCore:0.6.0'
+    }
+}
+
+task extractAddOnLibsAndHeaders(type: Sync) {
+    dependsOn configurations.liquidcore
+
+    from {
+        configurations.liquidcore.collect {zipTree(it)}
+    }
+    include "jni/**/*.so", "include/**/*"
+    into "build/liquidcore-addon"
+}
+
+afterEvaluate {
+    def addon = file('build/liquidcore-addon')
+    if (!addon.exists()) {
+        if (project.hasProperty("externalNativeBuildDebug")) {
+            externalNativeBuildDebug.dependsOn extractAddOnLibsAndHeaders
+        }
+        if (project.hasProperty("externalNativeBuildRelease")) {
+            externalNativeBuildRelease.dependsOn extractAddOnLibsAndHeaders
+        }
+    }
 }
 
 // build a jar with source files
