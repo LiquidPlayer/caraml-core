@@ -60,7 +60,7 @@ public class CaramlView extends RelativeLayout {
 
         TypedArray a = context.getTheme().obtainStyledAttributes(
                 attrs,
-                R.styleable.LiquidView,
+                R.styleable.CaramlView,
                 0, 0);
         try {
             if (a.hasValue(R.styleable.CaramlView_caraml_URI)) {

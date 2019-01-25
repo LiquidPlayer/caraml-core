@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.public_header_files =
     "caraml-core/caraml-core/LCCaramlJS.h",
     "caraml-core/caraml-core/LCCaramlSurface.h",
-    "caraml-core/caraml-core/CaramlView.h"
+    "caraml-core/caraml-core/CaramlView.h",
     "caraml-core/caraml-core/caraml_core.h"
 
   s.xcconfig = {
