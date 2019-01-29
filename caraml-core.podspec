@@ -2,7 +2,6 @@ Pod::Spec.new do |s|
   s.name         = "caraml-core"
   s.version      = "0.6.0"
   s.summary      = "Native mobile UI addon for LiquidCore"
-
   s.description  = <<-DESC
     Provides a view that can be embedded in apps that exposes a surface API
     to LiquidCore.
@@ -17,19 +16,26 @@ Pod::Spec.new do |s|
 
   s.source = { :git => "https://github.com/LiquidPlayer/caraml-core.git", :tag => "#{s.version}" }
 
-  s.source_files  =
-    "src/*.{cpp,h}",
+  s.source_files  = "src/*.{cpp,h}",
     "caraml-core/caraml-core/*.{h,m,mm}"
 
-  s.public_header_files =
-    "caraml-core/caraml-core/LCCaramlJS.h",
+  s.public_header_files = ["caraml-core/caraml-core/LCCaramlJS.h",
     "caraml-core/caraml-core/LCCaramlSurface.h",
     "caraml-core/caraml-core/CaramlView.h",
-    "caraml-core/caraml-core/caraml_core.h"
+    "caraml-core/caraml-core/caraml_core.h"]
+
+  s.requires_arc = true
 
   s.xcconfig = {
-    :CLANG_WARN_DOCUMENTATION_COMMENTS => 'NO'
+    :CLANG_WARN_DOCUMENTATION_COMMENTS => 'NO',
+    :CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES => 'YES'
   }
 
-  s.dependency "LiquidCore"
+  s.libraries = [
+    'c++'
+  ]
+  s.swift_version = '3.0'
+
+  s.dependency 'LiquidCore'
+  #s.dependency 'LiquidCore-v8-headers'
 end

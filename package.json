@@ -26,6 +26,9 @@
     "android": "release/caraml-core-android-release",
     "android-dev": "caraml-core-android",
     "ios": 0,
-    "ios-dev": "caraml-core.podspec"
+    "ios-dev": {
+      "name": "caraml-core",
+      "path": "caraml-core.podspec"
+    }
   }
 }

@@ -14,6 +14,6 @@ FOUNDATION_EXPORT double caraml_coreVersionNumber;
 //! Project version string for caraml_core.
 FOUNDATION_EXPORT const unsigned char caraml_coreVersionString[];
 
-#import <caraml_core/LCCaramlSurface.h>
-#import <caraml_core/LCCaramlJS.h>
-#import <caraml_core/CaramlView.h>
+#import "LCCaramlSurface.h"
+#import "LCCaramlJS.h"
+#import "CaramlView.h"
