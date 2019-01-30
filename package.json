@@ -25,7 +25,11 @@
   "liquidcore-addon": {
     "android": "release/caraml-core-android-release",
     "android-dev": "caraml-core-android",
-    "ios": 0,
+    "ios": {
+      "name": "caraml-core",
+      "version": "0.6.0",
+      "specs": "https://github.com/LiquidPlayer/Specs.git"
+    },
     "ios-dev": {
       "name": "caraml-core",
       "path": "caraml-core.podspec"
