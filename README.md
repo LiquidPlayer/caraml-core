@@ -3,7 +3,7 @@
 caraml
 ------
 
-Caraml is a native mobile UI markup language designed for running native micro-apps on Android and iOS
+caraml is a native mobile UI markup language designed for running native micro-apps on Android and iOS
 from node.js instances.  It is built on top of [LiquidCore](https://github.com/LiquidPlayer/LiquidCore), a
 library which provides node-based virtual machines on mobile devices.
 
