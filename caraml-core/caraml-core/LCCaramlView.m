@@ -1,25 +1,23 @@
-//
-//  CaramlView.m
-//  caraml-core
-//
-//  Created by Eric Lange on 1/10/19.
-//  Copyright © 2019 LiquidPlayer. All rights reserved.
-//
-
-#import "CaramlView.h"
-#import "CaramlView_private.h"
+/*
+ * Copyright (c) 2019 Eric Lange
+ *
+ * Distributed under the MIT License.  See LICENSE.md at
+ * https://github.com/LiquidPlayer/caraml-core for terms and conditions.
+ */
+#import "LCCaramlView.h"
+#import "LCCaramlView_private.h"
 #import "LCCaramlJS.h"
 #import "LCCaramlJS_private.h"
 
 static NSMutableDictionary *contextMap;
 
-@interface CaramlView() <LCMicroServiceDelegate>
+@interface LCCaramlView() <LCMicroServiceDelegate>
 @property (nonatomic, strong) UIView *surfaceView;
 @property (nonatomic, strong) NSObject<LCCaramlSurface> *attachedSurface;
 @property (nonatomic, strong) LCCaramlJS *caramlJS;
 @end
 
-@implementation CaramlView {
+@implementation LCCaramlView {
     LCMicroService *service_;
     NSArray *argv_;
     unsigned long contextHash_;

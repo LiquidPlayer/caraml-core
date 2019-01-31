@@ -1,22 +1,20 @@
-//
-//  CaramlJS.m
-//  caraml-core
-//
-//  Created by Eric Lange on 1/10/19.
-//  Copyright © 2019 LiquidPlayer. All rights reserved.
-//
-
+/*
+ * Copyright (c) 2019 Eric Lange
+ *
+ * Distributed under the MIT License.  See LICENSE.md at
+ * https://github.com/LiquidPlayer/caraml-core for terms and conditions.
+ */
 #import "LCCaramlJS.h"
 #import "LCCaramlJS_private.h"
-#import "CaramlView.h"
-#import "CaramlView_private.h"
+#import "LCCaramlView.h"
+#import "LCCaramlView_private.h"
 
 @interface LCCaramlJS()
-@property (nonatomic, strong) CaramlView *m_view;
+@property (nonatomic, strong) LCCaramlView *m_view;
 @end
 
 @implementation LCCaramlJS
-- (id) init:(JSContext*)context view:(CaramlView*)view
+- (id) init:(JSContext*)context view:(LCCaramlView*)view
 {
     self = [super init];
     if (self != nil) {
@@ -43,7 +41,7 @@
     }
     
     @throw [NSException exceptionWithName:@"NotACaramlJSObjectException"
-                                   reason:@"Object is not a CaramlJS object"
+                                   reason:@"Object is not an LCCaramlJS object"
                                  userInfo:nil];
 }
 

@@ -1,11 +1,9 @@
-//
-//  CaramlView.h
-//  caraml-core
-//
-//  Created by Eric Lange on 1/10/19.
-//  Copyright © 2019 LiquidPlayer. All rights reserved.
-//
-
+/*
+ * Copyright (c) 2019 Eric Lange
+ *
+ * Distributed under the MIT License.  See LICENSE.md at
+ * https://github.com/LiquidPlayer/caraml-core for terms and conditions.
+ */
 #import <UIKit/UIKit.h>
 #import <LiquidCore/LiquidCore.h>
 
@@ -13,15 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 IB_DESIGNABLE
 /**
- `LCLiquidView` exposes an `LCMicroService` through a UI.  An `LCMicroService` attaches to a UI
- in JavaScript by calling `LiquidCore.attach(surface, callback)` where
- `surface` is a string representing the `LCSurface` class canonical name
- (e.g. `org.liquidplayer.surfaces.console.ConsoleSurface`) and `callback` is a
- callback function which accepts an `error` parameter.  If `error` is `undefined`, then the
- `LCSurface` was attached correctly and is ready for use.  Otherwise, `error` is a descriptive
- error message.
+ `LCCaramlView` exposes an `LCMicroService` through a UI.
  */
-@interface CaramlView : UIView
+@interface LCCaramlView : UIView
 
 /**
  The URL of the micro service.  The `URL` is mutually exclusive with the `jsResource`.  Use only

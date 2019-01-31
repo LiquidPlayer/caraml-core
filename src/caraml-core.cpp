@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2019 Eric Lange
+ *
+ * Distributed under the MIT License.  See LICENSE.md at
+ * https://github.com/LiquidPlayer/caraml-core for terms and conditions.
+ */
 #include "node.h"
 #include "caraml-core.h"
 
