@@ -1,5 +1,5 @@
 include ':caraml-core-android'
-include ':LiquidCoreAndroid'
+include ':LiquidCore'
 
-project(':LiquidCoreAndroid').projectDir = new File(
+project(':LiquidCore').projectDir = new File(
         rootProject.projectDir, '../LiquidCore/LiquidCoreAndroid')

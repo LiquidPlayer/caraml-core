@@ -34,13 +34,7 @@ import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * LiquidView exposes a MicroService through a UI.  A MicroService attaches to a UI
- * in JavaScript by calling <code>LiquidCore.attach(surface, callback)</code> where
- * 'surface' is a string representing the Surface class
- * (e.g. 'org.liquidplayer.surfaces.console.ConsoleSurface') and 'callback' is a
- * callback function which accepts an 'error' parameter.  If 'error' is undefined, then the
- * Surface was attached correctly and is ready for use.  Otherwise, 'error' is a descriptive
- * error message.
+ * CaramlView exposes a MicroService through a UI.
  */
 public class CaramlView extends RelativeLayout {
 
