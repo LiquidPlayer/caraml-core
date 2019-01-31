@@ -74,7 +74,7 @@ You can insert the view into any layout like so:
 #### iOS Interface Builder
 
 Drag a `UIView` onto your storyboard in a `ViewController`.  Go to the identity inspector on the right and
-set its custom class to `CaramlView`.
+set its custom class to `LCCaramlView`.
 
 #### Android programmatic
 
@@ -88,7 +88,7 @@ import org.liquidplayer.caraml.CaramlView;
 ```swift
 import caraml_core
 ...
-    let caramlView = CaramlView(frame: CGRect.zero)
+    let caramlView = LCCaramlView(frame: CGRect.zero)
 ```
 
 This is all that is required to get it up and running.  `CaramlView` defaults to using the dev server at port
@@ -99,3 +99,20 @@ interface builders.
 Native Surface API
 ------------------
 
+To do
+
+JavaScript API
+--------------
+
+### caraml Core
+
+The `caraml-core` module provides an object representing the `CaramlView` (Android) or `LCCaramlView` that
+created this JavaScript context.  It can be accessed using:
+
+```javascript
+const core = require('@liquidcore/caraml-core')
+```
+
+The `core` object appears to be an empty object in JavaScript, but is bound to a native representation
+of the view.  This object can be passed to native surface implementations which enables the ability to attach
+and detach surfaces to the view.
