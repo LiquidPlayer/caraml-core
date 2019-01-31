@@ -1,5 +1,3 @@
-(work in progress)
-
 caraml
 ------
 
@@ -99,7 +97,8 @@ interface builders.
 Native Surface API
 ------------------
 
-To do
+* [Android JavaDocs v0.1.0](https://liquidplayer.github.io/caraml-core-android/0.1.0/index.html)
+* [iOS Swift/Objective C Jazzy Docs v.0.1.0](https://liquidplayer.github.io/caraml-core/0.1.0/index.html)
 
 JavaScript API
 --------------
