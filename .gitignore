@@ -12,4 +12,3 @@
 .externalNativeBuild
 /node_modules
 /Carthage
-/release
