@@ -11,9 +11,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ Protocol to expose LCCaramlJS object to JavaScript
+ */
 @protocol LCCaramlJSExports<JSExport>
 @end
 
+/**
+ The object passed from JavaScript which provides the attach/detach API.
+ */
 @interface LCCaramlJS : NSObject<LCCaramlJSExports>
 
 /**
@@ -23,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) attach:(NSObject<LCCaramlSurface>*)surface;
 
 /**
- If a surface is attached to the view represented by this {@code #CaramlJS} object, it will
+ If a surface is attached to the view represented by this `LCCaramlJS` object, it will
  be detached, otherwise this will perform no action.
  */
 - (void) detach;

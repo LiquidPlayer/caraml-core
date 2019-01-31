@@ -12,6 +12,9 @@ import org.liquidplayer.javascript.JSContext;
 import org.liquidplayer.javascript.JSObject;
 import org.liquidplayer.javascript.JSValue;
 
+/**
+ * The object passed from JavaScript which provides the attach/detach API.
+ */
 public class CaramlJS extends JSObject {
     private static class NotACaramlJSObjectException extends RuntimeException {
         NotACaramlJSObjectException() {
