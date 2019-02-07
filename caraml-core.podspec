@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "caraml-core"
-  s.version      = "0.6.0"
+  s.version      = "0.1.2"
   s.summary      = "Native mobile UI addon for LiquidCore"
   s.description  = <<-DESC
     Provides a view that can be embedded in apps that exposes a surface API
