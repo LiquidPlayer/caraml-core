@@ -6,7 +6,7 @@
  */
 package org.liquidplayer.caraml;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.liquidplayer.javascript.JSContext;
 import org.liquidplayer.javascript.JSObject;

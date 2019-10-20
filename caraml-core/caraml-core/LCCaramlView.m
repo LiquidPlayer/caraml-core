@@ -66,9 +66,7 @@ static NSMutableDictionary *contextMap;
     
     if (self.jsResource != nil) {
         self.URL = [[[NSBundle mainBundle] URLForResource:_jsResource withExtension:@"js"] absoluteString];
-    }
-    
-    if (self.URL == nil) {
+    } else if (self.URL == nil) {
         self.URL = [[LCMicroService devServer] absoluteString];
     }
     
