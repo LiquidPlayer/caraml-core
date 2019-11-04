@@ -153,10 +153,10 @@ static NSMutableDictionary *contextMap;
                 [self.surfaceView setNeedsLayout];
                 [self addSubview:self.surfaceView];
                 
-                [self.surfaceView.topAnchor constraintEqualToAnchor:self.topAnchor];
-                [self.surfaceView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor];
-                [self.surfaceView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor];
-                [self.surfaceView.trailingAnchor constraintEqualToAnchor:self.trailingAnchor];
+                [self.surfaceView.topAnchor constraintEqualToAnchor:self.topAnchor].active = YES;
+                [self.surfaceView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
+                [self.surfaceView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor].active = YES;
+                [self.surfaceView.trailingAnchor constraintEqualToAnchor:self.trailingAnchor].active = YES;
                 
                 self.attachedSurface = surface;
                 [surface onAttached:onRestore];
