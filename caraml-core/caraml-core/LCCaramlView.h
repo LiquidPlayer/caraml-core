@@ -16,20 +16,26 @@ IB_DESIGNABLE
 @interface LCCaramlView : UIView
 
 /**
- The URL of the micro service.  The `URL` is mutually exclusive with the `jsResource`.  Use only
- one or the other.
+ The URL of the micro service.  The `URL` is mutually exclusive with the `jsResource` and 'bundle'.  Use only
+ one.
  @note The property is exposed through the Interface Builder in XCode and should not
  used programmatically.
  */
 @property (nonatomic, strong) IBInspectable NSString* URL;
 
 /**
- The path to a JavaScript resource file.  The `jsResource` is mutually exclusive with the `URL`.  Use only
- one or the other.
+ The path to a JavaScript resource file.  The `jsResource` is mutually exclusive with the `URL` and 'bundle'.  Use only
+ one,
  @note The property is exposed through the Interface Builder in XCode and is not
  used programmatically.
  */
 @property (nonatomic, strong) IBInspectable NSString* jsResource;
+
+/**
+ The name of the entry point of the automatic bundle (default 'index').  The 'bundle' is mutually exclusive
+ with the 'URL' and 'jsResource'.  Use only one.
+ */
+@property (nonatomic, strong) IBInspectable NSString* bundle;
 
 /**
  An array of space-delimited arguments to start the micro service with.

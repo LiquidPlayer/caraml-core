@@ -64,10 +64,12 @@ static NSMutableDictionary *contextMap;
         }
     }
     
-    if (self.jsResource != nil) {
+    if (self.bundle != nil) {
+        self.URL = [[LCMicroService bundle:self.bundle] absoluteString];
+    } else if (self.jsResource != nil) {
         self.URL = [[[NSBundle mainBundle] URLForResource:_jsResource withExtension:@"js"] absoluteString];
     } else if (self.URL == nil) {
-        self.URL = [[LCMicroService devServer] absoluteString];
+        self.URL = [[LCMicroService bundle:@"index"] absoluteString];
     }
     
     if (array.count > 0) {
@@ -91,7 +93,7 @@ static NSMutableDictionary *contextMap;
 - (LCMicroService *) start:(NSURL*)uri argv:(NSArray*)argv
 {
     if (uri == nil) {
-        uri = [LCMicroService devServer];
+        uri = [LCMicroService bundle:@"index"];
     }
     self.URL = uri.absoluteString;
     
@@ -107,7 +109,7 @@ static NSMutableDictionary *contextMap;
 - (LCMicroService *) start:(NSURL*)uri arguments:(NSString*)argv, ...
 {
     if (uri == nil) {
-        uri = [LCMicroService devServer];
+        uri = [LCMicroService bundle:@"index"];
     }
     self.URL = uri.absoluteString;
     

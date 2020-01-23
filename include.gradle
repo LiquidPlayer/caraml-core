@@ -1,0 +1,39 @@
+apply plugin: 'de.undercouch.download'
+import groovy.json.JsonSlurper
+
+def getCaramlCoreVersionFromNpm() {
+    def inputFile = new File(buildscript.getSourceFile().getParent(), "package.json")
+    def packageJson = new JsonSlurper().parseText(inputFile.text)
+
+    return packageJson["version"]
+}
+
+if (!project.hasProperty('caraml_core_include_gradle')) {
+  project.ext.set('caraml_core_include_gradle', true)
+  def _caraml_core_aar = "caraml-core-lib-" + getCaramlCoreVersionFromNpm() + ".aar"
+
+  def downloadsDir_caraml_core = new File(rootProject.projectDir, ".liquidcore")
+  task createDownloadsDir_caraml_core {
+      downloadsDir_caraml_core.mkdirs()
+  }
+  dependencies {
+      if (findProject(':caraml-core-lib') != null) {
+          implementation project(':caraml-core-lib')
+      } else {
+          implementation fileTree(include:[_caraml_core_aar], dir:downloadsDir_caraml_core)
+      }
+  }
+
+  if (findProject(':caraml-core-lib') == null) {
+    android { tasks.withType(JavaCompile) {
+        compileTask -> compileTask.dependsOn download_caraml_core_lib }}
+    task download_caraml_core_lib(dependsOn: createDownloadsDir_caraml_core, type: Download) {
+        src 'https://liquidplayer.github.io/packages/' + _caraml_core_aar
+        onlyIfNewer true
+        overwrite false
+        dest new File(downloadsDir_caraml_core, _caraml_core_aar)
+    }
+  }
+
+  apply from: new File(buildscript.getSourceFile(), '../node_modules/liquidcore/include.gradle')
+}

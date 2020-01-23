@@ -63,7 +63,7 @@ public class CaramlView extends RelativeLayout {
                     uri = URI.create(uri_);
                 }
             } else if (attrs != null) {
-                uri = MicroService.DevServer();
+                uri = MicroService.Bundle(context);
             }
             if (a.hasValue(R.styleable.CaramlView_caraml_argv))
                 argv = getResources()
