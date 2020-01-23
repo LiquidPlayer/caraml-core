@@ -54,12 +54,12 @@ You can insert the view into any layout like so:
 Drag a `UIView` onto your storyboard in a `ViewController`.  Go to the identity inspector on the right and
 set its custom class to `LCCaramlView`.
 
-#### Android programmatic
+#### Android (Kotlin) programmatic
 
-```java
+```kotlin
 import org.liquidplayer.caraml.CaramlView;
 ...
-    CaramlView caramlView = new CaramlView(androidContext);
+    val caramlView = CaramlView(androidContext)
 ```
 
 #### iOS (Swift)
@@ -69,8 +69,7 @@ import caraml_core
     let caramlView = LCCaramlView(frame: CGRect.zero)
 ```
 
-This is all that is required to get it up and running.  `CaramlView` defaults to using the dev server at port
-8082.  To use other servers or local resources, the URL can be specified both programmatically and in the
+This is all that is required to get it up and running.  `CaramlView` defaults to using a bundle with the entry point `index.js` (see [Automatic Bundling](https://github.com/LiquidPlayer/LiquidCore/blob/master/README.md#automatic-bundling) for more information).  To use other servers or local resources, the URL can be specified both programmatically and in the
 interface builders.
 
 
