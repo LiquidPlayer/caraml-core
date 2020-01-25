@@ -1,6 +1,6 @@
 {
   "name": "@liquidcore/caraml-core",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Caraml core view controller",
   "main": "lib/index.js",
   "directories": {
