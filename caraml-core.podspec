@@ -27,8 +27,12 @@ Pod::Spec.new do |s|
   s.xcconfig = {
     :CLANG_WARN_DOCUMENTATION_COMMENTS => 'NO',
     :CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES => 'YES',
+    :OTHER_CFLAGS => [
+      '-Wno-nullability-completeness'
+    ].join(' '),
     :HEADER_SEARCH_PATHS => [
-      "${PODS_CONFIGURATION_BUILD_DIR}/LiquidCore-headers/LiquidCore-headers.framework/PrivateHeaders",
+      "${PODS_CONFIGURATION_BUILD_DIR}/LiquidCore-headers/LiquidCore_headers.framework/PrivateHeaders/v8",
+      "${PODS_CONFIGURATION_BUILD_DIR}/LiquidCore-headers/LiquidCore_headers.framework/PrivateHeaders/node",
     ].join(' '),
   }
   s.dependency 'LiquidCore'
